@@ -8,8 +8,9 @@
     }
     $conn = mysqli_connect("127.0.0.1", "root", "", "przedszkole_Adamczyk_Chojnacki");
     if (!$conn) {
-        echo "<script>alert(\"Couldn't connect to database! Redirecting to home page.\");
-        window.location.href = 'index.html';</script>";
+        echo "<script>alert('Couldn't connect to database! Redirecting to home page.')</script>";
+        header("Location: index.html");
+        die();
     }
 ?>
 <!DOCTYPE html>
@@ -22,7 +23,7 @@
 <body>
 
 <div id="container">
-    <div id="account_settings">
+    <div id="login_menu">
         <div class="shadow_text"><h1>Account settings</h1></div>
         <form method="POST">
             <p><table>
@@ -107,7 +108,6 @@
         <?php
             if (isset($_POST["log_out"])) {
                 session_unset();
-                header("Refresh:1");
             }
         ?>
         </form>

@@ -107,7 +107,7 @@ a{
     font-size: 20px;
 }
 
-#holidays,#schedule,#rodo,#statute,#food,#groups,#activities{
+#holidays,#schedule,#rodo,#statute,#foodd,#groups,#activities,#rodoo{
     float: left;
     text-align: left;
 }
@@ -127,6 +127,7 @@ a{
     position: absolute;
     width: 70%;
     left: 15%;
+  
 }
 #contact{
     text-align: center;
@@ -173,7 +174,6 @@ a{
     width: 100%;
 }
 #hours2{
-    width: -moz-fit-content;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
@@ -206,26 +206,87 @@ a{
 
 hr {
     border-style: solid;
-    border-color: white;
+}
+#food_table{
+    width: 100%;
+    table-layout: fixed;
 }
 
-table.group_info {
-    border-color: white;
-    border-style: solid;
-    border-width: 1px;
-}
-
-td.group_info {
-    background-color: #9ADB98;
+#food_table td{
     padding: 1%;
 }
+#food{
+    text-align: center;
+    color: #F55536;
+    width: 100%;
+}
+#food2{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+#foodd{
+color:white;
 
-td.group_info_2 {
+
+}
+#rodo{
+    text-align: center;
+    color: #F55536;
+    width: 100%;
+
+
+}
+#rodo2{
+    text-align: center;
+
+
+}
+#razem{
+    
+    width: 100px;
+    height: 100px;
     padding: 1%;
 }
+#carnival{
+    text-align:center;
 
-tr.group_info {
-    border-bottom-color: white;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
+
 }
+#charity{
+    width: 35%;
+    float: right;
+    margin-right: 735px;
+    color:#F55536;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#date{
+    float: right;
+    margin-right: -1195px;
+   
+    color:#F55536;
+}
+#tekst{
+    margin-left:10px;
+
+
+}
+#up{
+    padding: 1px;
+    
+}
+.mid1{
+    margin-top:2%;
+    background-color: #7DC95E;
+    border-radius: 10px;
+    color: white;
+    position: static;
+    height: 24%;
+    width: 70%;
+    margin-left: 15%;
+
+}
+#mapa{
+    margin-left: 35%;
+    border-radius: 2%;
+}   

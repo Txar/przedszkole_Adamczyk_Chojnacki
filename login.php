@@ -8,8 +8,9 @@
     }
     $conn = mysqli_connect("127.0.0.1", "root", "", "przedszkole_Adamczyk_Chojnacki");
     if (!$conn) {
-        echo "<script>alert(\"Couldn't connect to database! Redirecting to home page.\");
-        window.location.href = 'index.html';</script>";
+        echo "<script>alert('Couldn't connect to database! Redirecting to home page.')</script>";
+        header("Location: index.html");
+        die();
     }
 ?>
 
@@ -57,7 +58,6 @@
                             echo "<a>Logged in succesfully!</a>";
                             $_SESSION['account_id'] = $row['id'];
                             session_write_close();
-                            header("Refresh:1");
                         }
                     }
 
