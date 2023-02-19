@@ -1,0 +1,90 @@
+body{
+    background-color: #F6BD60;
+    color: white;
+}
+
+#container{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+a{
+    color: #8ACB88;
+}
+
+#back_button{
+    position: absolute;
+    bottom: 4%;
+    background-color: #8ACB88;
+    padding: 1.5%;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+button{
+    background-color: #8ACB88;
+    padding: 1%;
+    border-radius: 5px;
+    color: white;
+    border: none;
+}
+
+button:hover, #back_button{
+    cursor: pointer;
+}
+
+form{
+    text-align: center;
+    
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+#login_menu{
+    position: absolute;
+    background-color: #2D93AD;
+    width: 50%;
+    top: 5%;
+    left: 25%;
+    border-radius: 10px;
+    height: 50%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+}
+
+.warning{
+    color: #F55536;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    font-weight: bold;
+}
+
+.shadow_text {
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#F55536;
+    text-shadow: 0 1px 0 #000000,
+    0 2px 0 #0e0b0b,
+    0 3px 0 #000000,
+    0 4px 0 #050303,
+    0 5px 0 #000000,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+}
+
+hr {
+    border-style: solid;
+}

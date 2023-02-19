@@ -1,0 +1,289 @@
+* {
+    font-family: 'Arial';
+}
+
+body{
+    background-color: #F6BD60;
+}
+
+#container{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#baner{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium';
+    color:#DC143C;
+    text-shadow: 0 1px 0 #000000,
+    0 2px 0 #0e0b0b,
+    0 3px 0 #000000,
+    0 4px 0 #050303,
+    0 5px 0 #000000,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+}
+
+#tabela_menu{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 25px;
+    width: 100%;
+    table-layout: fixed;
+}
+
+td{
+    text-align: center;
+}
+
+#menu{
+    text-align: center;
+    background-color: #2D93AD;
+    width: 70%;
+    margin-left: 15%;
+    border-radius: 10px;
+    max-height: 20%;
+}
+
+#godlo{
+    height: 100%;
+    margin-right: 20px;
+    margin-left: 20px;
+    float: right;
+}
+
+a:hover{
+    background-color:#4169E1;
+}
+
+#logowanie{
+    font-size: 150%;
+    float: right;
+    vertical-align: middle;
+}
+
+a:link{
+    color: white;
+}
+
+a:visited{
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+#left_top{
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    width: 20%;
+    height: 4%;
+    text-align: left;
+}
+
+#left{
+    background-color:#2D93AD;
+    width: 9%;
+    color: white;
+    border-radius: 10px;
+    float: left;
+}
+
+#tabela_left{
+    border-spacing: 15px;
+    font-size: 20px;
+}
+
+#holidays,#schedule,#rodo,#statute,#foodd,#groups,#activities,#rodoo{
+    float: left;
+    text-align: left;
+}
+
+#hol{
+    text-align: center;
+    color: #F55536;
+}
+#hol2{
+    text-align: center;
+}
+#mid{
+    background-color: #7DC95E;
+    border-radius: 10px;
+    color: white;
+    margin-top: 2%;
+    position: absolute;
+    width: 70%;
+    left: 15%;
+  
+}
+#contact{
+    text-align: center;
+    color: #F55536;
+}
+#contact2{
+    text-align: center;
+}
+#day{
+    text-align: center;
+    color: #F55536;
+}
+#day2{
+    padding: 1%;
+    text-align: justify;
+}
+#about{
+    text-align:center;
+    color: #F55536;
+
+}
+#about2{
+    padding: 1%;
+}
+#statut{
+    text-align: center;
+    color: #F55536;
+
+}
+#statut2{
+    text-align: center;
+    color:black;
+}
+#group{
+    text-align: center;
+    color: #F55536;
+}
+#group2{
+    text-align: center;
+}
+#hours{
+    text-align: center;
+    color: #F55536;
+    width: 100%;
+}
+#hours2{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+#statute_a{
+    color: white;
+}
+#extra{
+    text-align: center;
+    color: #F55536;
+}
+#extra2{
+    padding: 1%;
+    text-align: justify;
+}
+#rhytm{
+
+    font-weight: bold;
+
+}
+
+#hours_table{
+    width: 100%;
+    table-layout: fixed;
+}
+
+#hours_table td{
+    padding: 1%;
+}
+
+hr {
+    border-style: solid;
+}
+#food_table{
+    width: 100%;
+    table-layout: fixed;
+}
+
+#food_table td{
+    padding: 1%;
+}
+#food{
+    text-align: center;
+    color: #F55536;
+    width: 100%;
+}
+#food2{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+#foodd{
+color:white;
+
+
+}
+#rodo{
+    text-align: center;
+    color: #F55536;
+    width: 100%;
+
+
+}
+#rodo2{
+    text-align: center;
+
+
+}
+#razem{
+    
+    width: 100px;
+    height: 100px;
+    padding: 1%;
+}
+#carnival{
+    text-align:center;
+
+
+}
+#charity{
+    width: 35%;
+    float: right;
+    margin-right: 735px;
+    color:#F55536;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#date{
+    float: right;
+    margin-right: -1195px;
+   
+    color:#F55536;
+}
+#tekst{
+    margin-left:10px;
+
+
+}
+#up{
+    padding: 1px;
+    
+}
+.mid1{
+    margin-top:2%;
+    background-color: #7DC95E;
+    border-radius: 10px;
+    color: white;
+    position: static;
+    height: 24%;
+    width: 70%;
+    margin-left: 15%;
+
+}
+#mapa{
+    margin-left: 35%;
+    border-radius: 2%;
+}   
