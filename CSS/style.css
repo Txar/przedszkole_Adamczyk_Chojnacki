@@ -3,7 +3,7 @@
 }
 
 body{
-    background-image: url('bg_export.svg');
+    background-image: url('../IMAGES/bg_export.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #307f15ff;
@@ -206,6 +206,7 @@ a{
 
 hr {
     border-style: solid;
+    
 }
 #food_table{
     width: 100%;
@@ -230,6 +231,18 @@ color:white;
 
 
 }
+img{
+    width: 8%;
+    height: 14%;
+}
+
+#date{
+    float: right;
+    
+    margin-right: 1%;
+
+}
+
 #rodo{
     text-align: center;
     color: #F55536;
@@ -242,51 +255,106 @@ color:white;
 
 
 }
-#razem{
-    
-    width: 100px;
-    height: 100px;
-    padding: 1%;
-}
-#carnival{
-    text-align:center;
 
-
-}
-#charity{
-    width: 35%;
-    float: right;
-    margin-right: 735px;
-    color:#F55536;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-#date{
-    float: right;
-    margin-right: -1195px;
-   
-    color:#F55536;
-}
-#tekst{
-    margin-left:10px;
-
-
-}
-#up{
-    padding: 1px;
-    
-}
 .mid1{
     margin-top:2%;
     background-color: #7DC95E;
     border-radius: 10px;
     color: white;
     position: static;
-    height: 24%;
+    height: 30%;
     width: 70%;
     margin-left: 15%;
 
 }
 #mapa{
-    margin-left: 35%;
+    margin-left:25%;
+    width: 50%;
     border-radius: 2%;
-}   
+    margin-bottom:2%;
+}
+
+table.group_info_2 {
+    table-layout: fixed;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    border-collapse: collapse;
+}
+
+table.group_info {
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    border-collapse: collapse;
+}
+
+td.group_info {
+    background-color: #9ADB98;
+    padding: 1%;
+}
+
+td.group_info_2 {
+    padding: 1%;
+}
+
+tr.group_info {
+    border-bottom-color: white;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+}
+
+tr.group_info_2 {
+    border-bottom-color: white;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+#charity{
+    color:#F55536 ;
+    width: 60%;
+    margin-top:2%;   
+    margin-left: 13%;
+    float: left;
+   
+}
+#fee{
+    text-align: center;
+    color: #F55536;
+}
+#fee2{
+    padding: 1%;
+    text-align: justify;
+}
+#konto{
+    text-align: center;
+    color: #F55536;
+}
+#razem{
+    position: absolute;
+
+
+}
+#tekst{
+    text-align: center;
+    
+ 
+}
+#hr1{
+    position: relative;
+
+
+}
+#down{
+    border-top: solid 1px;
+
+}
+#up{
+    width: 100%;
+    height:50%;
+}
