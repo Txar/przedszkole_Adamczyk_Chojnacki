@@ -18,7 +18,7 @@
 <head>
     <title>Przedszkole</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="login_style.css">        
+    <link rel="stylesheet" type="text/css" href="../CSS/login_style.css">        
 </head>
 <body>
 
@@ -45,16 +45,23 @@
                     <td>Account type:</td>
                     <td>
                     <?php
-                        $_query1 = "SELECT id, login FROM accounts;";
+                        $_query1 = "SELECT `accounts`.`id` as 'id', `name` FROM accounts JOIN account_types ON Account_types_id = `account_types`.`id`;";
                         $query = mysqli_query($conn, $_query1);
                         while ($row = mysqli_fetch_array($query)) {
                             if ($_SESSION['account_id'] == $row['id']) {
-                                echo $row['login'];
+                                echo $row['name'];
                             }
                         }
                     ?>
                 </tr>
             </table></p>
+            <?php
+            if (isset($_POST["log_out"])) {
+                session_unset();
+                header("Refresh: 1");
+                die();
+            }
+            ?>
             <hr>
             
             <h3>Password change</h3>
@@ -103,13 +110,8 @@
             ?>
         </p>
         <p>
-            <input type="submit" name="log_out" value="Log out" />
+            <input class="submit_button" type="submit" name="log_out" value="Log out" />
         </p>
-        <?php
-            if (isset($_POST["log_out"])) {
-                session_unset();
-            }
-        ?>
         </form>
 
         <a id="back_button" href="index.html">Back to home page</a>

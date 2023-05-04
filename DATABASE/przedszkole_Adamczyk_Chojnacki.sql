@@ -1,21 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.1.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 08 Lut 2023, 10:48
--- Wersja serwera: 10.4.20-MariaDB
--- Wersja PHP: 8.0.9
+-- Czas generowania: 18 Kwi 2023, 22:49
+-- Wersja serwera: 10.4.24-MariaDB
+-- Wersja PHP: 8.1.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Baza danych: `przedszkole_adamczyk_chojnacki`
@@ -40,7 +34,10 @@ CREATE TABLE `accounts` (
 --
 
 INSERT INTO `accounts` (`id`, `Account_types_id`, `Groups_id`, `login`, `passphrase`) VALUES
-(4, 1, NULL, 'Admin', 'e3afed0047b08059d0fada10f400c1e5');
+(4, 1, NULL, 'Admin', 'e3afed0047b08059d0fada10f400c1e5'),
+(5, 2, 1, 'J.Nowak', 'ef95a18332efaf28581f31b66d5557d3'),
+(6, 2, 2, 'S.Ogórek', '2f586d8879de9cfee669b0decac10eee'),
+(7, 2, 3, 'H.Zając', '4ca9f73077a9b89283a56dcfff0037bf');
 
 -- --------------------------------------------------------
 
@@ -83,7 +80,43 @@ CREATE TABLE `children` (
 --
 
 INSERT INTO `children` (`id`, `Groups_id`, `Parents_id`, `first_name`, `last_name`, `PESEL`, `gender`) VALUES
-(1, 1, 1, 'Karol', 'Szczepanik', '20292943399', 'm');
+(1, 1, 1, 'Karol', 'Szczepanik', '20292943399', 'm'),
+(3, 1, 3, 'Katarzyna', 'Szustak', '75011228723', 'f'),
+(4, 1, 3, 'Maria', 'Szustak', '32092710833', 'f'),
+(5, 1, 3, 'Andrzej', 'Szustak', '27022433144', 'm'),
+(6, 1, 4, 'Wiktoria', 'Kalinowska', '32051012802', 'f'),
+(7, 1, 4, 'Michał', 'Kalinowski', '26100925588', 'm'),
+(8, 1, 5, 'Michalina', 'Krawczyk', '00302715813', 'f'),
+(9, 1, 6, 'Konrad', 'Wolański', '49101556816', 'm'),
+(10, 1, 7, 'Konrad', 'Bohdanowicz', '62041111552', 'm'),
+(11, 1, 8, 'Weronika', 'Bogdańska', '01260482225', 'f'),
+(12, 2, 9, 'Dorota', 'Małek', '08301455422', 'f'),
+(13, 2, 10, 'Mirosław', 'Kowal', '80042211385', 'm'),
+(14, 2, 11, 'Mirosław', 'Więtek', '70031548550', 'm'),
+(15, 2, 11, 'Michał', 'Więtek', '68100202672', 'm'),
+(16, 2, 12, 'Karolina', 'Wrońska', '88110288008', 'f'),
+(17, 2, 12, 'Katarzyna', 'Wrońska', '97040368834', 'f'),
+(18, 2, 13, 'Krzysztof', 'Malinowski', '86041767810', 'm'),
+(19, 2, 13, 'Marek', 'Malinowski', '41080503078', 'm'),
+(20, 2, 14, 'Mariola', 'Małecka', '80012131510', 'f'),
+(21, 3, 15, 'Wioletta', 'Matusiak', '42101136318', 'f'),
+(22, 3, 15, 'Michalina', 'Matusiak', '35081350401', 'f'),
+(23, 3, 16, 'Mariusz', 'Banaszkiewicz', '85102181673', 'm'),
+(24, 3, 16, 'Karol', 'Banaszkiewicz', '09282011085', 'm'),
+(25, 3, 17, 'Wiktor', 'Banaś', '47050306335', 'm'),
+(26, 3, 17, 'Dorian', 'Banaś', '51080284712', 'm'),
+(27, 3, 18, 'Wojciech', 'Karasiński', '23251270530', 'm'),
+(28, 3, 18, 'Daria', 'Karasińska', '06240914583', 'f'),
+(29, 3, 19, 'Patryk', 'Więckowski', '53080731843', 'm'),
+(30, 3, 19, 'Marta', 'Więckowska', '80021441486', 'f'),
+(31, 3, 20, 'Lidia', 'Adamczyk', '91012653762', 'f'),
+(32, 3, 20, 'Hanna', 'Adamczyk', '02281823811', 'f'),
+(33, 3, 20, 'Michał', 'Adamczyk', '13240844132', 'm'),
+(34, 3, 5, 'Andrzej', 'Krawczyk', '47062312531', 'm'),
+(35, 3, 5, 'Makary', 'Krawczyk', '73062650876', 'm'),
+(36, 3, 8, 'Karol', 'Bogdański', '13242206305', 'm'),
+(37, 3, 8, 'Karol', 'Bogdański', '52030553104', 'm'),
+(38, 2, 21, 'Kamil', 'Gieragus', '17322312531', 'm');
 
 -- --------------------------------------------------------
 
@@ -128,7 +161,26 @@ CREATE TABLE `parents` (
 --
 
 INSERT INTO `parents` (`id`, `first_name`, `last_name`, `phone_number`, `gender`, `zip_code`, `city`, `street`) VALUES
-(1, 'Jan', 'Szczepanik', '894039246', 'm', '78-102', 'Kołobrzeg', 'ul. Tarnopolska 3');
+(1, 'Jan', 'Szczepanik', '894039246', 'm', '78-102', 'Kołobrzeg', 'ul. Tarnopolska 3'),
+(3, 'Karol', 'Szustak', '517981800', 'm', '78-101', 'Kołobrzeg', 'ul. Przyrodnicza 15'),
+(4, 'Dorota', 'Kalinowska', '211337944', 'f', '78-100', 'Kołobrzeg', 'ul. Warszawska 12'),
+(5, 'Adam', 'Krawczyk', '212484974', 'm', '78-103', 'Kołobrzeg', 'ul. Armii Krajowej 42'),
+(6, 'Anastazja', 'Wolańska', '455873083', 'f', '78-104', 'Kołobrzeg', 'ul. Zachodnia 93'),
+(7, 'Marcelina', 'Bohdanowicz', '519843626', 'f', '78-105', 'Kołobrzeg', 'ul. Kwiatowa 110'),
+(8, 'Mariola', 'Bogdańska', '503551888', 'f', '78-106', 'Kołobrzeg', 'ul. Jodłowa 11'),
+(9, 'Karolina', 'Małek', '458906015', 'f', '78-107', 'Kołobrzeg', 'ul. Stalowa 83'),
+(10, 'Mariusz', 'Kowal', '212301918', 'm', '78-108', 'Kołobrzeg', 'ul. Liliowa 99'),
+(11, 'Jarosław', 'Więtek', '212273549', 'm', '78-110', 'Kołobrzeg', 'ul. Kaszubska 5'),
+(12, 'Weronika', 'Wrońska', '516340621', 'f', '78-111', 'Kołobrzeg', 'ul. Kulowa 5'),
+(13, 'Klaudia', 'Malinowska', '458656141', 'f', '78-112', 'Kołobrzeg', 'ul. Polna 73'),
+(14, 'Dariusz', 'Małecki', '211519892', 'm', '78-114', 'Kołobrzeg', 'ul. Kłodzka 55'),
+(15, 'Konrad', 'Matusiak', '532429882', 'm', '78-115', 'Kołobrzeg', 'ul. Maślana 52'),
+(16, 'Michał', 'Banaszkiewicz', '531115791', 'm', '78-116', 'Kołobrzeg', 'ul. Koślawa 42'),
+(17, 'Marcin', 'Banaś', '602557991', 'm', '78-118', 'Kołobrzeg', 'ul. Karlińskiego 44'),
+(18, 'Antoni', 'Karasiński', '212479964', 'm', '78-119', 'Kołobrzeg', 'ul. Piotrkowska 81'),
+(19, 'Wiktor', 'Więckowski', '452877201', 'm', '78-122', 'Kołobrzeg', 'ul. Akacjowa 150'),
+(20, 'Wojciech', 'Adamczyk', '212403328', 'm', '78-123', 'Kołobrzeg', 'ul. Kilińskiego 11'),
+(21, 'Paweł', 'Gieragus', '345235123', 'm', '78-092', 'Kołobrzeg', 'ul. Zielona 38');
 
 -- --------------------------------------------------------
 
@@ -207,7 +259,7 @@ ALTER TABLE `teachers`
 -- AUTO_INCREMENT dla tabeli `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT dla tabeli `account_types`
@@ -219,7 +271,7 @@ ALTER TABLE `account_types`
 -- AUTO_INCREMENT dla tabeli `children`
 --
 ALTER TABLE `children`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT dla tabeli `groups`
@@ -231,7 +283,7 @@ ALTER TABLE `groups`
 -- AUTO_INCREMENT dla tabeli `parents`
 --
 ALTER TABLE `parents`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT dla tabeli `teachers`
@@ -239,7 +291,3 @@ ALTER TABLE `parents`
 ALTER TABLE `teachers`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

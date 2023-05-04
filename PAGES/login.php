@@ -19,7 +19,7 @@
 <head>
     <title>Przedszkole</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="login_style.css">        
+    <link rel="stylesheet" type="text/css" href="../CSS/login_style.css">        
 </head>
 <body>
 
@@ -58,6 +58,8 @@
                             echo "<a>Logged in succesfully!</a>";
                             $_SESSION['account_id'] = $row['id'];
                             session_write_close();
+                            header("Refresh: 1");
+                            die();
                         }
                     }
 

@@ -1,5 +1,9 @@
+* {
+    font-family: 'Arial';
+}
+
 body{
-    background-image: url('bg_export.svg');
+    background-image: url('../IMAGES/bg_export.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #307f15ff;
@@ -15,13 +19,13 @@ body{
 }
 
 a{
-    color: #8ACB88;
+    color: #9ADB98;
 }
 
 #back_button{
     position: absolute;
     bottom: 4%;
-    background-color: #8ACB88;
+    background-color: #9ADB98;
     padding: 1.5%;
     border-radius: 5px;
     color: white;
@@ -29,7 +33,7 @@ a{
 }
 
 button{
-    background-color: #8ACB88;
+    background-color: #9ADB98;
     padding: 1%;
     border-radius: 5px;
     color: white;
@@ -95,4 +99,17 @@ table{
 hr {
     border-style: solid;
     border-color: white;
+}
+
+.submit_button{
+    background-color: #9ADB98;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    padding: 1%;
+}
+
+.submit_button:hover {
+    cursor: pointer;
 }
